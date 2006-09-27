@@ -1,0 +1,46 @@
+Distributed merge between LysKOM and a Wiki with templating/content
+transformers (a text can be a type for another text, and thus describe
+how to transform that other text into something that's possible to
+display, e.g. XSLT stylesheets).
+
+Nodes subscribe to texts to get notifications on changes to the
+relations between that text and other texts (e.g. addition of
+comments). Subscriptions are mutual/bidirectional between nodes.
+
+Two nodes with a link between them can not both have the same text,
+and not being subscribed to it.
+
+This means that a node that retrieves a new text (e.g. by following a
+link from a text it is subscribed to) is also automatically subscribed
+to that text.
+
+Nodes can not delete texts that have more than one subscriber.
+
+If a node is deleted that has relations to texts with _other_
+subscribers, those texts must be subscribed to by the subscriber of
+the deleted text. 
+
+The above ensures that if two nodes have the same text, there will be
+a subscription path between them for that text, so that changes to the
+relations between that text and other texts will (eventually)
+propagate to both nodes.
+
+Links does not nessesarily have to be up at all time.
+
+
+Texts can be annotated with urgency and priority, which can be used by
+a user agent to show certain messages in IRC-style.
+
+
+UI proposition:
+
+Like LysKOM, but with a buffer for text input like IRC. ENTER on an
+empty line is like LysKOM:s spacebar, escape sweitches between
+IRC-mode and command-mode (like LysKOMs x). All other short-cuts are
+Ctrl+key. IRCish /-commands may also be considered... All with
+tab-completion of-course,
+
+
+Considerations: SPAM-security and "emails" by restricting which links
+can subscribe to/modify links to/from which texts (using
+cryptography).

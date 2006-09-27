@@ -1,0 +1,19 @@
+Modelled (losely) after PAM, provide a system that allows programs to
+perform access checks for users using Grimoire Ability Lists.
+
+Library that can load modules for access control.
+
+Module that uses RuneStone to provide network transparency compatible
+with Grimoire.
+
+Module that reads Ability Lists from a file.
+
+Module that reads Ability Lists from LDAP according to the same rules
+as Grimoires' LdapAbility does ATM.
+
+Daemon that uses RuneStone to provide Merlins' services to the above
+mentioned network transparency module.
+
+Daemon that uses the library and http://www.dazuko.org/ to provide the
+access control system to the Linux Kernel.
+

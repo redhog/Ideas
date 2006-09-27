@@ -1,0 +1,16 @@
+Add a file-rewriting system for Arch that can transform files of
+certain filetypes (use "file" to determine) prior to check-in and
+after check-out.
+
+Example: For OpenDocument files: unzip, add newlines after each
+xml-tag in the xml-files
+
+Also make sure merges, conflicts and what-changed --diffs are handled
+in some constructive way.
+
+The transformation system can also be used to automagically add
+taglines to files that doesn't have them but should according to their
+names.
+
+Modify an Arch GUI to work as an Office document version management
+system.

@@ -1,0 +1,7 @@
+C implementation of Grimoire trees on top of Dirt.
+
+Parsing and serialization of core Grimoire data structures (Classes,
+Objects, ParamsTypes and AnnotatedValues).
+
+Main loop for serving trees to remote hosts.
+

@@ -1,0 +1,14 @@
+* DemoWave
+  * Fix ordering problem for completed votations
+  * Materialized views
+  * Add "law set" votation type
+* RuneStone
+* PythonDirt
+  Python wrapper for Dirt, compatible with the old Dirt Python
+  implementation.
+* Merlin
+* Grimoire
+  * Implement a visual ability list editor
+  * Reimplement Grimweb to use Webwidgets
+* Redback Webwidgets
+  * Implement a tree-view

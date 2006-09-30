@@ -1,7 +1,8 @@
 Distributed merge between LysKOM and a Wiki with templating/content
-transformers (a text can be a type for another text, and thus describe
-how to transform that other text into something that's possible to
-display, e.g. XSLT stylesheets).
+transformers.
+
+How texts are distributed 
+--------------------------
 
 Nodes subscribe to texts to get notifications on changes to the
 relations between that text and other texts (e.g. addition of
@@ -28,11 +29,30 @@ propagate to both nodes.
 Links does not nessesarily have to be up at all time.
 
 
+Text relations
+---------------
+
 Texts can be annotated with urgency and priority, which can be used by
 a user agent to show certain messages in IRC-style.
 
+Each text has another text as its "type". The content of that other
+text will then be used to transform the current text into into
+something that's possible to display. A possible language for such
+"type" texts might be XSLT. A "type" text can also be related to a
+"reverse transform" and "form" used to let the user "edit" a text to
+create a "new version" (see below).
 
-UI proposition:
+Each text can have any number of other texts as "comments".
+
+Each text can have any number of other texts as "newer versions".
+Certain UI operations will follow the trail of "newer text" relations
+(using the latest added one, or using a priority list of different
+authors to select among multiple such relations for the same text)
+until a text with no such relations is reached.
+
+
+User interface
+---------------
 
 Like LysKOM, but with a buffer for text input like IRC. ENTER on an
 empty line is like LysKOM:s spacebar, escape sweitches between
@@ -41,6 +61,8 @@ Ctrl+key. IRCish /-commands may also be considered... All with
 tab-completion of-course,
 
 
-Considerations: SPAM-security and "emails" by restricting which links
-can subscribe to/modify links to/from which texts (using
-cryptography).
+Considerations
+---------------
+
+SPAM-security and "emails" by restricting which links can subscribe
+to/modify links to/from which texts (using cryptography).
